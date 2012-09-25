@@ -6,21 +6,11 @@
  */ 
 
 ;(function(factory) {
-	if (typeof define === 'function' && define.amd) {
-		// AMD available; use anonymous module
-		if ( typeof jQuery !== 'undefined' ) {
-			define(['jquery'], factory);	
-		} else {
-			define([], factory);
-		}
-	} else {
-		// No AMD available; mutate global vars
-		if ( typeof jQuery !== 'undefined' ) {
-			factory(jQuery);
-		} else {
-			factory();
-		}
-	}
+  if ( typeof jQuery !== 'undefined' ) {
+    factory(jQuery);
+  } else {
+    factory();
+  }
 })(function($, undefined) {
 	
 	var tag2attr = {
